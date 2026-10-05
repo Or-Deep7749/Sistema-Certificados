@@ -15,7 +15,7 @@ export default function Home(){
   })
 
   async function gerarCertificado() {
-    const resposta = await fetch("https://sistema-certificados-ehpr.onrender.com",{
+    const resposta = await fetch("https://sistema-certificados-ehpr.onrender.com/certificado", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
