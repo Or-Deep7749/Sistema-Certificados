@@ -29,6 +29,13 @@ export default function Home(){
       const link = document.createElement("a")
       link.href = url
       link.download = "certificado.pdf"
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+      window.URL.revokeObjectURL(url)
+      alert("Certificado gerado com sucesso!")
+    } else {
+      alert("Erro ao gerar o certificado.")
     }
   }
 
